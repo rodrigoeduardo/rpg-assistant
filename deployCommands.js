@@ -22,6 +22,12 @@ const commands = [
         .setDescription("The dice to roll and modifiers")
         .setRequired(true)
     ),
+  new SlashCommandBuilder()
+    .setName("start")
+    .setDescription("Makes the bot join your voice channel"),
+  new SlashCommandBuilder()
+    .setName("end")
+    .setDescription("Makes the bot leave your voice channel"),
 ].map((command) => command.toJSON());
 
 const rest = new REST({ version: "10" }).setToken(BOT_TOKEN);
